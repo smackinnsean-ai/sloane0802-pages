@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SLOANE0802 — Web Design &amp; Media Studio</title>
+    <meta
+      name="description"
+      content="Sharp digital identities and high-performance websites for people doing work worth noticing."
+    />
+    <link rel="canonical" href="https://sloane.mackinnonbrothers.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SLOANE0802 — Web Design &amp; Media Studio" />
+    <meta
+      property="og:description"
+      content="Sharp digital identities and high-performance websites for people doing work worth noticing."
+    />
+    <meta property="og:url" content="https://sloane.mackinnonbrothers.com/" />
+    <meta property="og:image" content="https://sloane.mackinnonbrothers.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SLOANE0802 — Web Design &amp; Media Studio" />
+    <meta
+      name="twitter:description"
+      content="Sharp digital identities and high-performance websites for people doing work worth noticing."
+    />
+    <meta name="twitter:image" content="https://sloane.mackinnonbrothers.com/og.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="minimal-site" id="top">
+      <header class="minimal-nav">
+        <a class="minimal-logo" href="#top" aria-label="SLOANE0802 home">
+          SLOANE<span>0802</span>
+        </a>
+        <p>Independent digital studio</p>
+        <a class="minimal-nav-cta" href="#contact">
+          Start a project <span aria-hidden="true">↘</span>
+        </a>
+      </header>
+
+      <section class="minimal-hero" aria-labelledby="hero-title">
+        <div class="minimal-copy">
+          <p class="minimal-kicker">Web design / development</p>
+          <h1 id="hero-title">
+            Websites<br />
+            that <em>hit.</em>
+          </h1>
+          <p class="minimal-statement">
+            Simple, sharp websites for businesses that need to look credible,
+            get found, and get contacted.
+          </p>
+          <div class="minimal-proof" aria-label="Our services">
+            <span>Design</span>
+            <span>Build</span>
+            <span>Launch</span>
+          </div>
+        </div>
+
+        <aside class="minimal-contact" id="contact">
+          <div id="inquiry-form-panel">
+            <p class="minimal-form-label">Have a project?</p>
+            <h2>Tell us what you need.</h2>
+            <form id="project-form">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                <span>Current website <small>(optional)</small></span>
+                <input
+                  name="website"
+                  type="url"
+                  inputmode="url"
+                  placeholder="https://"
+                />
+              </label>
+              <label>
+                <span>What are we making?</span>
+                <textarea name="details" rows="3" required></textarea>
+              </label>
+              <button class="minimal-submit" type="submit">
+                Send project details <span aria-hidden="true">↗</span>
+              </button>
+            </form>
+            <a class="minimal-email" href="mailto:hello@sloane0802.com">
+              Or email hello@sloane0802.com
+            </a>
+          </div>
+
+          <div class="minimal-success" id="inquiry-success" role="status" hidden>
+            <span class="minimal-success-mark" aria-hidden="true">✓</span>
+            <p class="minimal-form-label">Inquiry ready</p>
+            <h2>Let's make it happen.</h2>
+            <p>
+              This prototype has captured the full contact flow. The live inbox
+              connection is the next backend step.
+            </p>
+            <button id="send-another" type="button">Send another inquiry</button>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="minimal-footer">
+        <span>Ontario, Canada</span>
+        <span>Working everywhere</span>
+        <span>&copy; 2026 SLOANE0802</span>
+      </footer>
+    </main>
+  </body>
+</html>
