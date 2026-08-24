@@ -84,38 +84,12 @@
                   <option value="new-website">A new website</option>
                   <option value="website-redesign">A website redesign</option>
                   <option value="landing-page">A landing page</option>
-                  <option value="online-store">An online store</option>
-                  <option value="website-support">Website fixes or ongoing support</option>
-                  <option value="brand-and-website">A brand and website package</option>
-                  <option value="not-sure">Not sure yet</option>
+                  <option value="other">Other</option>
                 </select>
               </label>
-              <label>
-                <span>What should it do?</span>
-                <select name="primaryGoal" required>
-                  <option value="" selected disabled>Choose the main goal</option>
-                  <option value="generate-leads">Generate more inquiries</option>
-                  <option value="build-credibility">Make the business look credible</option>
-                  <option value="sell-online">Sell products or services online</option>
-                  <option value="showcase-work">Showcase our work</option>
-                  <option value="improve-search">Get found more easily</option>
-                  <option value="easier-updates">Make the site easier to update</option>
-                </select>
-              </label>
-              <label>
-                <span>Ideal timing</span>
-                <select name="timeline" required>
-                  <option value="" selected disabled>Choose a timeline</option>
-                  <option value="asap">As soon as possible</option>
-                  <option value="two-to-four-weeks">Within 2–4 weeks</option>
-                  <option value="one-to-three-months">Within 1–3 months</option>
-                  <option value="flexible">Flexible</option>
-                  <option value="exploring">Just exploring</option>
-                </select>
-              </label>
-              <label>
-                <span>Anything else? <small>(optional)</small></span>
-                <textarea name="details" rows="2"></textarea>
+              <label id="other-project-field" hidden>
+                <span>Tell us what you have in mind</span>
+                <input name="otherProjectType" type="text" />
               </label>
               <button class="minimal-submit" type="submit">
                 Send project details <span aria-hidden="true">↗</span>

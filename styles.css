@@ -230,6 +230,10 @@ body {
   gap: 0.35rem;
 }
 
+.minimal-contact label[hidden] {
+  display: none;
+}
+
 .minimal-contact label > span {
   font-size: 0.62rem;
   font-weight: 700;
