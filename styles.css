@@ -244,6 +244,7 @@ body {
 }
 
 .minimal-contact input,
+.minimal-contact select,
 .minimal-contact textarea {
   width: 100%;
   min-height: 2.65rem;
@@ -262,7 +263,17 @@ body {
   min-height: 4.5rem;
 }
 
+.minimal-contact select {
+  cursor: pointer;
+}
+
+.minimal-contact select option {
+  color: var(--minimal-black);
+  background: var(--minimal-paper);
+}
+
 .minimal-contact input:focus,
+.minimal-contact select:focus,
 .minimal-contact textarea:focus {
   border-color: #6c8d00;
   box-shadow: 0 2px 0 #6c8d00;
@@ -295,10 +306,20 @@ body {
 
 .minimal-intake-note {
   display: block;
-  margin-top: 1rem;
+  margin: 1rem 0 0;
   color: #4f4a52;
   font-size: 0.65rem;
   text-align: center;
+}
+
+.minimal-direct-email {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--minimal-black);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-align: center;
+  text-underline-offset: 0.2rem;
 }
 
 .minimal-success {
