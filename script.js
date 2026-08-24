@@ -5,6 +5,8 @@ const sendAnotherButton = document.querySelector("#send-another");
 const projectTypeSelect = form.elements.projectType;
 const otherProjectField = document.querySelector("#other-project-field");
 const otherProjectInput = form.elements.otherProjectType;
+const submitButton = form.querySelector('button[type="submit"]');
+const formError = document.querySelector("#form-error");
 
 const syncOtherProjectField = () => {
   const showOtherField = projectTypeSelect.value === "other";
@@ -18,10 +20,32 @@ const syncOtherProjectField = () => {
 
 projectTypeSelect.addEventListener("change", syncOtherProjectField);
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  formPanel.hidden = true;
-  successPanel.hidden = false;
+  formError.hidden = true;
+  submitButton.disabled = true;
+  submitButton.setAttribute("aria-busy", "true");
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+
+    if (!response.ok) {
+      throw new Error("Inquiry delivery failed");
+    }
+
+    formPanel.hidden = true;
+    successPanel.hidden = false;
+  } catch (error) {
+    console.error(error);
+    formError.hidden = false;
+  } finally {
+    submitButton.disabled = false;
+    submitButton.removeAttribute("aria-busy");
+  }
 });
 
 sendAnotherButton.addEventListener("click", () => {

@@ -308,6 +308,18 @@ body {
   box-shadow: 5px 5px 0 var(--minimal-black);
 }
 
+.minimal-submit:disabled {
+  cursor: wait;
+  opacity: 0.68;
+}
+
+.minimal-form-error {
+  margin: 0.85rem 0 0;
+  color: #9f1d20;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
 .minimal-intake-note {
   display: block;
   margin: 1rem 0 0;

@@ -59,7 +59,17 @@
           <div id="inquiry-form-panel">
             <p class="minimal-form-label">Have a project?</p>
             <h2>Tell us what you need.</h2>
-            <form id="project-form">
+            <form
+              id="project-form"
+              action="https://formsubmit.co/ajax/sean@mackinnonbrothers.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New SLOANE website inquiry"
+              />
+              <input type="hidden" name="_template" value="table" />
               <label>
                 <span>Name</span>
                 <input name="name" type="text" autocomplete="name" required />
@@ -94,8 +104,13 @@
               <button class="minimal-submit" type="submit">
                 Send project details <span aria-hidden="true">↗</span>
               </button>
+              <p class="minimal-form-error" id="form-error" role="alert" hidden>
+                We couldn't send that right now. Please email Sean directly below.
+              </p>
             </form>
-            <p class="minimal-intake-note">Form delivery to Sean comes next.</p>
+            <p class="minimal-intake-note">
+              Submissions are delivered to sean@mackinnonbrothers.com.
+            </p>
             <a class="minimal-direct-email" href="mailto:sean@mackinnonbrothers.com">
               Or email sean@mackinnonbrothers.com
             </a>
@@ -103,12 +118,11 @@
 
           <div class="minimal-success" id="inquiry-success" role="status" hidden>
             <span class="minimal-success-mark" aria-hidden="true">✓</span>
-            <p class="minimal-form-label">Inquiry ready</p>
-            <h2>Project noted.</h2>
+            <p class="minimal-form-label">Inquiry sent</p>
+            <h2>Sean has your details.</h2>
             <p>
-              This local preview captured the details, but nothing was sent.
-              Next, we can send it to sean@mackinnonbrothers.com and your
-              private WebsiteDeals intake.
+              Thanks for reaching out. Your project details were delivered to
+              sean@mackinnonbrothers.com.
             </p>
             <button id="send-another" type="button">Send another inquiry</button>
           </div>
