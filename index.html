@@ -25,7 +25,7 @@
     />
     <meta name="twitter:image" content="https://sloane.mackinnonbrothers.com/og.png" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js?v=20260824-1" defer></script>
+    <script src="script.js?v=20260824-2" defer></script>
   </head>
   <body>
     <main class="minimal-site" id="top">
@@ -82,9 +82,12 @@
                 <span>Current website <small>(optional)</small></span>
                 <input
                   name="website"
-                  type="url"
+                  type="text"
                   inputmode="url"
-                  placeholder="https://"
+                  autocomplete="url"
+                  autocapitalize="none"
+                  spellcheck="false"
+                  placeholder="mackinnonbrothers.com"
                 />
               </label>
               <label>

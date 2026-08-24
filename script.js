@@ -3,6 +3,7 @@ const formPanel = document.querySelector("#inquiry-form-panel");
 const successPanel = document.querySelector("#inquiry-success");
 const sendAnotherButton = document.querySelector("#send-another");
 const projectTypeSelect = form.elements.projectType;
+const websiteInput = form.elements.website;
 const otherProjectField = document.querySelector("#other-project-field");
 const otherProjectInput = form.elements.otherProjectType;
 const submitButton = form.querySelector('button[type="submit"]');
@@ -25,6 +26,11 @@ form.addEventListener("submit", async (event) => {
   formError.hidden = true;
   submitButton.disabled = true;
   submitButton.setAttribute("aria-busy", "true");
+
+  const websiteValue = websiteInput.value.trim();
+  if (websiteValue && !/^[a-z][a-z\d+.-]*:\/\//i.test(websiteValue)) {
+    websiteInput.value = `https://${websiteValue}`;
+  }
 
   try {
     const response = await fetch(form.action, {
